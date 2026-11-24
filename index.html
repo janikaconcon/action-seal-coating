@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Action Seal Coating LLC | Asphalt Paving &amp; Seal Coating in Sebring, FL</title>
+<meta name="description" content="Action Seal Coating LLC — family-run asphalt paving and seal coating in Sebring, Florida. Driveways, parking lots, crack filling, excavation and grading. 5.0 stars from 10 Google reviews. Call (863) 451-6591.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14161a;
+    --ink-2:#1d2026;
+    --ink-3:#2a2e36;
+    --asphalt:#0d0f12;
+    --amber:#f5a623;
+    --amber-deep:#d98a0b;
+    --concrete:#f4f2ee;
+    --concrete-2:#e6e2da;
+    --gray:#6b7280;
+    --white:#ffffff;
+    --line:rgba(255,255,255,.12);
+    --shadow:0 18px 40px -18px rgba(13,15,18,.45);
+    --radius:4px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;line-height:1.05;letter-spacing:.01em;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{width:min(1180px,92vw);margin-inline:auto}
+  .eyebrow{
+    font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;
+    letter-spacing:.18em;font-size:.82rem;color:var(--amber-deep);display:block;margin-bottom:.6rem;
+  }
+  .eyebrow.on-dark{color:var(--amber)}
+
+  /* ---------- top bar ---------- */
+  .topbar{background:var(--asphalt);color:#c9ccd2;font-size:.82rem;border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+  .topbar .tb-left{display:flex;gap:1.4rem;flex-wrap:wrap;align-items:center}
+  .topbar .tb-item{display:flex;align-items:center;gap:.45rem}
+  .topbar svg{width:14px;height:14px;fill:var(--amber);flex:none}
+  .topbar .tb-right{display:flex;align-items:center;gap:.5rem;color:#e8eaee}
+  .stars{color:var(--amber);letter-spacing:.08em;font-size:.8rem}
+
+  /* ---------- nav ---------- */
+  header.nav{position:sticky;top:0;z-index:60;background:rgba(13,15,18,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .25s}
+  header.nav.scrolled{box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px}
+  .brand{display:flex;align-items:center;gap:.7rem;color:#fff}
+  .brand-mark{
+    width:42px;height:42px;flex:none;background:var(--amber);color:var(--asphalt);
+    display:grid;place-items:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    font-size:1.35rem;border-radius:2px;letter-spacing:-.02em;
+  }
+  .brand-text{display:flex;flex-direction:column;line-height:1.1}
+  .brand-text b{font-family:'Barlow Condensed',sans-serif;font-size:1.22rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+  .brand-text span{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#9aa0aa}
+  nav.links{display:flex;align-items:center;gap:1.6rem}
+  nav.links a{color:#c9ccd2;font-size:.86rem;font-weight:500;letter-spacing:.02em;position:relative;padding:.3rem 0;transition:color .2s}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--amber);transition:width .25s}
+  nav.links a:hover,nav.links a.active{color:#fff}
+  nav.links a:hover::after,nav.links a.active::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:.7rem}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    font-weight:600;font-size:.88rem;letter-spacing:.02em;padding:.78rem 1.35rem;
+    border-radius:var(--radius);border:2px solid transparent;cursor:pointer;
+    transition:transform .18s,background .2s,color .2s,border-color .2s;white-space:nowrap;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-amber{background:var(--amber);color:var(--asphalt)}
+  .btn-amber:hover{background:#ffb63d}
+  .btn-ghost{border-color:rgba(255,255,255,.28);color:#fff}
+  .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:var(--ink-3)}
+  .btn-outline-dark{border-color:var(--ink);color:var(--ink)}
+  .btn-outline-dark:hover{background:var(--ink);color:#fff}
+  .btn svg{width:16px;height:16px;fill:currentColor}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:.25s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;background:var(--asphalt);color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(100deg,rgba(13,15,18,.96) 0%,rgba(13,15,18,.86) 42%,rgba(13,15,18,.55) 100%);
+  }
+  .hero .wrap{position:relative;z-index:2;padding:5.5rem 0 5rem;display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,5.4vw,4.5rem);margin-bottom:1.1rem}
+  .hero h1 em{font-style:normal;color:var(--amber);display:block}
+  .hero p.lede{font-size:1.06rem;color:#c3c7ce;max-width:34rem;margin-bottom:1.9rem}
+  .hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2.2rem}
+  .hero-badges{display:flex;gap:2rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.5rem}
+  .hero-badge b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;color:var(--amber);line-height:1}
+  .hero-badge span{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:#9aa0aa}
+
+  .quote-card{background:#fff;color:var(--ink);border-radius:6px;padding:2rem;box-shadow:var(--shadow);border-top:5px solid var(--amber)}
+  .quote-card h3{font-size:1.5rem;margin-bottom:.3rem}
+  .quote-card p.sub{font-size:.85rem;color:var(--gray);margin-bottom:1.3rem}
+  .field{margin-bottom:.85rem}
+  .field label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:.3rem}
+  .field input,.field select,.field textarea{
+    width:100%;padding:.7rem .8rem;border:1.5px solid var(--concrete-2);border-radius:3px;
+    font-family:inherit;font-size:.92rem;color:var(--ink);background:#fbfaf8;transition:border-color .2s,background .2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--amber);background:#fff}
+  .field textarea{resize:vertical;min-height:74px}
+  .quote-card .btn{width:100%;margin-top:.4rem}
+  .form-note{font-size:.72rem;color:var(--gray);margin-top:.7rem;line-height:1.5}
+  .form-msg{display:none;margin-top:.9rem;padding:.8rem .9rem;border-radius:3px;font-size:.85rem;line-height:1.5}
+  .form-msg.show{display:block}
+  .form-msg.err{background:#fdecec;color:#a12a2a;border-left:3px solid #d64545}
+  .form-msg.ok{background:#eef7ee;color:#1f5c2a;border-left:3px solid #3f9c4f}
+  .form-msg a{font-weight:700;text-decoration:underline}
+
+  /* ---------- trust strip ---------- */
+  .trust{background:var(--amber);color:var(--asphalt)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.15rem 0}
+  .trust-item{display:flex;align-items:center;gap:.65rem;font-size:.85rem;font-weight:600;letter-spacing:.01em}
+  .trust-item svg{width:20px;height:20px;fill:var(--asphalt);flex:none}
+
+  /* ---------- sections ---------- */
+  section{padding:5.5rem 0}
+  .sec-head{max-width:44rem;margin-bottom:3rem}
+  .sec-head h2{font-size:clamp(2rem,3.6vw,3rem);margin-bottom:.9rem}
+  .sec-head p{color:#4b5158;font-size:1.02rem}
+  .sec-head.center{margin-inline:auto;text-align:center}
+
+  /* services */
+  .services{background:var(--concrete)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .svc{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 2px 10px -4px rgba(13,15,18,.12);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+  .svc:hover{transform:translateY(-5px);box-shadow:0 22px 40px -22px rgba(13,15,18,.4)}
+  .svc-img{height:190px;overflow:hidden;position:relative;background:var(--ink-3)}
+  .svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .svc:hover .svc-img img{transform:scale(1.06)}
+  .svc-num{position:absolute;top:.8rem;left:.8rem;background:var(--amber);color:var(--asphalt);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;padding:.15rem .5rem;border-radius:2px;letter-spacing:.06em}
+  .svc-body{padding:1.4rem 1.5rem 1.6rem;flex:1;display:flex;flex-direction:column}
+  .svc-body h3{font-size:1.35rem;margin-bottom:.5rem}
+  .svc-body p{font-size:.9rem;color:#565c64;flex:1}
+  .svc-body .svc-link{margin-top:1rem;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-deep);display:inline-flex;align-items:center;gap:.35rem}
+  .svc-body .svc-link::after{content:"→";transition:transform .2s}
+  .svc:hover .svc-link::after{transform:translateX(4px)}
+
+  /* why us */
+  .why{background:var(--asphalt);color:#fff;position:relative;overflow:hidden}
+  .why::before{content:"";position:absolute;right:-8%;top:-20%;width:520px;height:520px;border:1px solid rgba(245,166,35,.16);border-radius:50%}
+  .why::after{content:"";position:absolute;right:2%;top:6%;width:340px;height:340px;border:1px solid rgba(245,166,35,.1);border-radius:50%}
+  .why .wrap{position:relative;z-index:2;display:grid;grid-template-columns:.95fr 1.05fr;gap:4rem;align-items:center}
+  .why h2{font-size:clamp(2rem,3.6vw,3rem);margin-bottom:1.1rem}
+  .why p.intro{color:#b9bec6;margin-bottom:1.8rem}
+  .why-list{display:grid;gap:1.15rem}
+  .why-item{display:flex;gap:1rem;align-items:flex-start}
+  .why-ico{width:38px;height:38px;flex:none;background:rgba(245,166,35,.14);border:1px solid rgba(245,166,35,.35);border-radius:3px;display:grid;place-items:center}
+  .why-ico svg{width:18px;height:18px;fill:var(--amber)}
+  .why-item h4{font-family:'Inter',sans-serif;font-size:.98rem;font-weight:700;text-transform:none;letter-spacing:0;margin-bottom:.15rem}
+  .why-item p{font-size:.88rem;color:#a8aeb7;line-height:1.55}
+  .why-visual{position:relative}
+  .why-visual img{width:100%;height:460px;object-fit:cover;border-radius:5px;filter:saturate(.9)}
+  .why-stat{position:absolute;bottom:-1.4rem;left:-1.4rem;background:var(--amber);color:var(--asphalt);padding:1.2rem 1.5rem;border-radius:4px;box-shadow:var(--shadow)}
+  .why-stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;line-height:1}
+  .why-stat span{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+
+  /* process */
+  .process{background:#fff}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;counter-reset:step}
+  .step{position:relative;padding-top:2.6rem}
+  .step::before{
+    counter-increment:step;content:counter(step,decimal-leading-zero);
+    position:absolute;top:0;left:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    font-size:2.6rem;color:var(--concrete-2);line-height:1;
+  }
+  .step::after{content:"";position:absolute;top:1.15rem;left:3.4rem;right:-1.5rem;height:1px;background:var(--concrete-2)}
+  .step:last-child::after{display:none}
+  .step h3{font-size:1.2rem;margin-bottom:.45rem;position:relative}
+  .step p{font-size:.88rem;color:#565c64}
+
+  /* reviews */
+  .reviews{background:var(--concrete)}
+  .rev-top{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+  .rev-score{display:flex;align-items:center;gap:1.2rem;background:#fff;padding:1.1rem 1.5rem;border-radius:5px;box-shadow:0 2px 10px -4px rgba(13,15,18,.12)}
+  .rev-score b{font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;line-height:1}
+  .rev-score .rs-meta{font-size:.8rem;color:var(--gray);line-height:1.4}
+  .rev-score .rs-meta .stars{font-size:1rem;display:block}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .rev{background:#fff;border-radius:5px;padding:1.7rem;box-shadow:0 2px 10px -4px rgba(13,15,18,.12);display:flex;flex-direction:column;border-top:3px solid var(--amber)}
+  .rev .stars{font-size:.95rem;margin-bottom:.8rem}
+  .rev blockquote{font-size:.94rem;color:#3a4048;line-height:1.65;flex:1;margin-bottom:1.2rem}
+  .rev .who{display:flex;align-items:center;gap:.7rem;border-top:1px solid var(--concrete-2);padding-top:1rem}
+  .rev .avatar{width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--amber);display:grid;place-items:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;flex:none}
+  .rev .who b{display:block;font-size:.88rem;font-weight:700}
+  .rev .who span{font-size:.74rem;color:var(--gray)}
+
+  /* area */
+  .area{background:#fff}
+  .area .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:center}
+  .area h2{font-size:clamp(2rem,3.6vw,3rem);margin-bottom:1rem}
+  .area p{color:#4b5158;margin-bottom:1.4rem}
+  .area-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+  .area-tags span{background:var(--concrete);border:1px solid var(--concrete-2);padding:.4rem .8rem;border-radius:100px;font-size:.8rem;font-weight:600;color:#3a4048}
+  .map-frame{border-radius:5px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--concrete-2);line-height:0}
+  .map-frame iframe{width:100%;height:400px;border:0;display:block}
+
+  /* contact */
+  .contact{background:var(--asphalt);color:#fff}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+  .contact h2{font-size:clamp(2rem,3.6vw,3rem);margin-bottom:1rem}
+  .contact p.intro{color:#b9bec6;margin-bottom:2rem}
+  .c-list{display:grid;gap:1.3rem}
+  .c-item{display:flex;gap:1rem;align-items:flex-start}
+  .c-ico{width:40px;height:40px;flex:none;background:rgba(245,166,35,.14);border:1px solid rgba(245,166,35,.35);border-radius:3px;display:grid;place-items:center}
+  .c-ico svg{width:18px;height:18px;fill:var(--amber)}
+  .c-item .c-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#8d939c;margin-bottom:.15rem}
+  .c-item .c-val{font-size:1rem;font-weight:600;color:#fff}
+  .c-item .c-val a:hover{color:var(--amber)}
+  .c-item .c-sub{font-size:.82rem;color:#9aa0aa;margin-top:.15rem}
+  .hours-table{width:100%;border-collapse:collapse;margin-top:.4rem;font-size:.88rem}
+  .hours-table td{padding:.28rem 0;color:#c3c7ce}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+  .hours-table tr.today td{color:var(--amber)}
+  .contact-card{background:#fff;color:var(--ink);border-radius:6px;padding:2.2rem;box-shadow:var(--shadow);border-top:5px solid var(--amber)}
+  .contact-card h3{font-size:1.6rem;margin-bottom:.3rem}
+  .contact-card p.sub{font-size:.85rem;color:var(--gray);margin-bottom:1.4rem}
+
+  /* footer */
+  footer{background:#08090b;color:#8d939c;padding:3.5rem 0 1.5rem;font-size:.86rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot-brand{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+  .foot-brand b{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;letter-spacing:.06em;text-transform:uppercase;color:#fff}
+  footer h4{font-family:'Inter',sans-serif;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:1rem;font-weight:700}
+  footer ul{list-style:none;display:grid;gap:.55rem}
+  footer a:hover{color:var(--amber)}
+  .foot-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1.5rem;font-size:.78rem;color:#6b7280}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:1024px){
+    .hero .wrap{grid-template-columns:1fr;gap:2.5rem;padding:4rem 0}
+    .hero p.lede{max-width:none}
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .why .wrap{grid-template-columns:1fr;gap:3rem}
+    .why-visual img{height:340px}
+    .steps{grid-template-columns:repeat(2,1fr);gap:2rem}
+    .step:nth-child(2)::after{display:none}
+    .rev-grid{grid-template-columns:1fr}
+    .area .wrap{grid-template-columns:1fr;gap:2.5rem}
+    .contact .wrap{grid-template-columns:1fr;gap:2.5rem}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    nav.links{
+      position:fixed;inset:74px 0 auto 0;background:var(--asphalt);flex-direction:column;
+      align-items:stretch;gap:0;padding:.5rem 0 1rem;border-bottom:1px solid var(--line);
+      transform:translateY(-130%);transition:transform .3s ease;max-height:calc(100vh - 74px);overflow:auto;
+    }
+    nav.links.open{transform:none}
+    nav.links a{padding:.9rem 6vw;border-bottom:1px solid rgba(255,255,255,.06);font-size:.95rem}
+    nav.links a::after{display:none}
+    .burger{display:block}
+    .nav-cta .btn-ghost{display:none}
+    .nav-cta .btn{padding:.6rem 1rem;font-size:.8rem}
+    .topbar .tb-right{display:none}
+    .trust .wrap{grid-template-columns:1fr 1fr;gap:.8rem}
+    .trust-item{font-size:.78rem}
+    .svc-grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .step::after{display:none}
+    .hero-badges{gap:1.4rem}
+    .hero-badge b{font-size:1.4rem}
+    section{padding:3.8rem 0}
+    .why-stat{left:0;bottom:-1rem;padding:1rem 1.2rem}
+    .why-stat b{font-size:2rem}
+    .foot-grid{grid-template-columns:1fr;gap:2rem}
+    .rev-top{align-items:flex-start}
+    .map-frame iframe{height:320px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <div class="tb-item">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <a href="tel:+18634516591">(863) 451-6591</a>
+      </div>
+      <div class="tb-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <span>301 Ruffians Way, Sebring, FL 33875</span>
+      </div>
+      <div class="tb-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6V6h-2v7.4l5.2 3.1 1-1.7-4.2-2.2z"/></svg>
+        <span>Open 7 days &middot; 8 AM &ndash; 9 PM</span>
+      </div>
+    </div>
+    <div class="tb-right">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>5.0 on Google &middot; 10 reviews</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="siteNav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Action Seal Coating LLC home">
+      <span class="brand-mark">AS</span>
+      <span class="brand-text">
+        <b>Action Seal Coating</b>
+        <span>Asphalt &middot; Sebring, FL</span>
+      </span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Free Estimate</a>
+      <a href="tel:+18634516591" class="btn btn-amber">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        Call Now
+      </a>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <img src="images/hero.jpg" alt="Freshly paved asphalt driveway" fetchpriority="high">
+  </div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Sebring &middot; Highlands County &middot; Since Day One</span>
+      <h1>Asphalt Done Right<em>The First Time.</em></h1>
+      <p class="lede">
+        Action Seal Coating LLC paves, seals and repairs driveways and parking lots across Sebring
+        and the surrounding Highlands County area. Owner Gus Garcia and his crew show up on schedule,
+        do the work themselves, and leave you with a surface that still looks sharp years later.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-amber">Get a Free Estimate</a>
+        <a href="tel:+18634516591" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          (863) 451-6591
+        </a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><b>5.0&#9733;</b><span>Google Rating</span></div>
+        <div class="hero-badge"><b>10</b><span>Verified Reviews</span></div>
+        <div class="hero-badge"><b>7 Days</b><span>Open Every Week</span></div>
+        <div class="hero-badge"><b>Free</b><span>On-Site Estimates</span></div>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <h3>Request Your Estimate</h3>
+      <p class="sub">Tell us about the job &mdash; we&rsquo;ll get back to you with a straight answer.</p>
+      <form id="estimateForm" novalidate>
+        <div class="field">
+          <label for="f-name">Your Name</label>
+          <input type="text" id="f-name" name="name" placeholder="Jane Smith" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input type="tel" id="f-phone" name="phone" placeholder="(863) 555-0123" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="f-service">What Do You Need?</label>
+          <select id="f-service" name="service">
+            <option>New asphalt driveway</option>
+            <option>Driveway seal coating</option>
+            <option>Parking lot paving / sealcoating</option>
+            <option>Crack filling &amp; asphalt repair</option>
+            <option>Excavation &amp; grading</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-notes">Job Details <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
+          <textarea id="f-notes" name="notes" placeholder="Approximate size, location, condition of the surface&hellip;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-amber">Prepare My Request</button>
+        <p class="form-note">This form doesn&rsquo;t send anything on its own &mdash; it builds a ready-to-send text or call so your request actually reaches us.</p>
+        <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4zm-1.2 15.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/></svg>
+      Licensed &amp; Insured
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V6l-8-4zm0 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 13c-2 0-3.8-1-4.9-2.6.1-1.6 3.3-2.4 4.9-2.4s4.8.8 4.9 2.4A5.9 5.9 0 0 1 12 19z"/></svg>
+      Family-Owned &amp; Operated
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M20 6h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zM9 4h6v2H9V4zm11 15H4v-6h5v2h6v-2h5v6z"/></svg>
+      Residential &amp; Commercial
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+      On Time, Every Time
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Paving &amp; Seal Coating Services</h2>
+      <p>From a brand-new circular driveway to a commercial lot that needs a fresh seal before season, we handle the whole job &mdash; prep, base, asphalt and finish.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="svc-img"><span class="svc-num">01</span><img src="images/driveway.jpg" alt="Newly paved residential asphalt driveway" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Asphalt Paving</h3>
+          <p>New driveways, extensions and full replacements. Proper base prep, correct thickness and a compacted finish that holds up to Florida heat and rain.</p>
+          <a href="#contact" class="svc-link">Get a quote</a>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><span class="svc-num">02</span><img src="images/sealcoat.jpg" alt="Seal coating being sprayed on an asphalt driveway" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Seal Coating</h3>
+          <p>Our namesake service. A protective seal that locks out water, slows oxidation and brings faded blacktop back to a deep, even black &mdash; usually in a single day.</p>
+          <a href="#contact" class="svc-link">Get a quote</a>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><span class="svc-num">03</span><img src="images/parkinglot.jpg" alt="Commercial asphalt parking lot" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Parking Lots</h3>
+          <p>Commercial paving, sealcoating and lot maintenance for churches, shops, offices and rental properties &mdash; scheduled around your business hours.</p>
+          <a href="#contact" class="svc-link">Get a quote</a>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><span class="svc-num">04</span><img src="images/crackfill.jpg" alt="Asphalt crack filling and repair" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Crack Filling &amp; Repair</h3>
+          <p>Catch cracks and potholes early. We clean, fill and seal the failure so water can&rsquo;t get under the surface and turn a small repair into a full repave.</p>
+          <a href="#contact" class="svc-link">Get a quote</a>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><span class="svc-num">05</span><img src="images/grading.jpg" alt="Excavation and grading for a driveway base" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Excavation &amp; Grading</h3>
+          <p>Clearing, grading and base work done before the asphalt goes down. Good drainage and a solid sub-base are what keep a driveway from cracking in year three.</p>
+          <a href="#contact" class="svc-link">Get a quote</a>
+        </div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-img"><span class="svc-num">06</span><img src="images/roller.jpg" alt="Asphalt roller compacting a new surface" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Resurfacing &amp; Overlay</h3>
+          <p>When the base is still sound but the top has worn out, an overlay restores the surface at a fraction of the cost of tearing everything out.</p>
+          <a href="#contact" class="svc-link">Get a quote</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow on-dark">Why Homeowners Call Us Back</span>
+      <h2>Small Crew.<br>Straight Answers.<br>Work That Lasts.</h2>
+      <p class="intro">
+        Action Seal Coating is not a franchise with a call center. When you call, you talk to the
+        people who will actually be on your driveway &mdash; and that shows up in the reviews.
+      </p>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-ico"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <div>
+            <h4>You deal with the owner</h4>
+            <p>Gus Garcia quotes the job and runs the crew. No handoffs, no surprise subcontractors, no &ldquo;that&rsquo;s not my department.&rdquo;</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-ico"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+          <div>
+            <h4>They show up when they say</h4>
+            <p>Reviewers keep mentioning the same thing: on schedule, on time, and finished when promised. That&rsquo;s the whole business model.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-ico"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4zm-1.2 15.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/></svg></div>
+          <div>
+            <h4>Fair price, no games</h4>
+            <p>&ldquo;Price is more than fair, and quality and integrity far exceeded my expectations&rdquo; &mdash; a real Google review, not a marketing line.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V6l-8-4z"/></svg></div>
+          <div>
+            <h4>Built for Florida weather</h4>
+            <p>Heavy summer rain and year-round sun are hard on asphalt. We build the base and the seal for the conditions you actually live in.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual reveal">
+      <img src="images/finished.jpg" alt="Finished blacktop driveway" loading="lazy">
+      <div class="why-stat">
+        <b>5.0&#9733;</b>
+        <span>10 Google Reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2>Four Steps, No Surprises</h2>
+      <p>From the first phone call to the final walkthrough, here&rsquo;s exactly what to expect.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <h3>Call or Request</h3>
+        <p>Tell us the address and what&rsquo;s going on with the surface. We&rsquo;ll ask a few questions and set a time to look at it.</p>
+      </div>
+      <div class="step reveal">
+        <h3>On-Site Estimate</h3>
+        <p>We measure, check the base and drainage, and give you a written price &mdash; not a range, not a &ldquo;starting at.&rdquo;</p>
+      </div>
+      <div class="step reveal">
+        <h3>Prep &amp; Pave</h3>
+        <p>Clearing, grading, base work, then asphalt or sealcoat. We protect the surrounding area and clean up as we go.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Final Walkthrough</h3>
+        <p>We walk the finished job with you, explain the cure time, and leave you with care instructions so it lasts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-top">
+      <div class="sec-head reveal" style="margin-bottom:0">
+        <span class="eyebrow">What Customers Say</span>
+        <h2>Ten Reviews. Five Stars. Every One.</h2>
+      </div>
+      <div class="rev-score reveal">
+        <b>5.0</b>
+        <div class="rs-meta">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          Based on 10 Google reviews
+        </div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <article class="rev reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Highly recommend. I can&rsquo;t say enough good things about this company. Gus and his crew were very friendly and professional, but most importantly, did a fabulous job pouring my new circular asphalt driveway. I am so pleased!&rdquo;</blockquote>
+        <div class="who">
+          <div class="avatar">D</div>
+          <div><b>Deb Marie</b><span>Google review &middot; Local Guide</span></div>
+        </div>
+      </article>
+      <article class="rev reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Gus and his company did an amazing job paving for us. He showed up right on schedule and made the driveway and sidewalk look fantastic. We are so happy with the work they did. Thanks again!&rdquo;</blockquote>
+        <div class="who">
+          <div class="avatar">J</div>
+          <div><b>Jason Bennett</b><span>Google review</span></div>
+        </div>
+      </article>
+      <article class="rev reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Had my very large driveway paved by Gus Garcia and his crew at Action Paving. I could not have been more pleased with the work that was done. Not only did they do an amazing job with the driveway, but they went out of their way to make&hellip;&rdquo;</blockquote>
+        <div class="who">
+          <div class="avatar">F</div>
+          <div><b>Frank Menendez</b><span>Google review</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Where We Work</span>
+      <h2>Serving Sebring &amp; Highlands County</h2>
+      <p>
+        We&rsquo;re based on Ruffians Way in Sebring and work throughout the surrounding communities.
+        If you&rsquo;re not sure whether we cover your address, just call &mdash; we&rsquo;ll tell you straight.
+      </p>
+      <div class="area-tags">
+        <span>Sebring</span>
+        <span>Avon Park</span>
+        <span>Lake Placid</span>
+        <span>Lorida</span>
+        <span>Venus</span>
+        <span>Placid Lakes</span>
+        <span>Highlands County</span>
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=301+Ruffians+Way,+Sebring,+FL+33875" target="_blank" rel="noopener" class="btn btn-outline-dark">Get Directions</a>
+    </div>
+    <div class="map-frame reveal">
+      <iframe
+        src="https://www.google.com/maps?q=301+Ruffians+Way,+Sebring,+FL+33875&output=embed"
+        title="Map showing Action Seal Coating LLC at 301 Ruffians Way, Sebring, FL 33875"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow on-dark">Get In Touch</span>
+      <h2>Let&rsquo;s Talk About Your Driveway</h2>
+      <p class="intro">Call for the fastest answer, or send the form and we&rsquo;ll follow up. Estimates are free and there&rsquo;s no pressure.</p>
+      <div class="c-list">
+        <div class="c-item">
+          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div>
+          <div>
+            <div class="c-label">Phone</div>
+            <div class="c-val"><a href="tel:+18634516591">(863) 451-6591</a></div>
+            <div class="c-sub">Call or text &mdash; we answer during business hours</div>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div>
+          <div>
+            <div class="c-label">Address</div>
+            <div class="c-val">301 Ruffians Way</div>
+            <div class="c-sub">Sebring, FL 33875</div>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6V6h-2v7.4l5.2 3.1 1-1.7-4.2-2.2z"/></svg></div>
+          <div style="flex:1">
+            <div class="c-label">Hours</div>
+            <table class="hours-table" id="hoursTable">
+              <tr data-day="1"><td>Monday</td><td>8 AM &ndash; 9 PM</td></tr>
+              <tr data-day="2"><td>Tuesday</td><td>8 AM &ndash; 9 PM</td></tr>
+              <tr data-day="3"><td>Wednesday</td><td>8 AM &ndash; 9 PM</td></tr>
+              <tr data-day="4"><td>Thursday</td><td>8 AM &ndash; 9 PM</td></tr>
+              <tr data-day="5"><td>Friday</td><td>8 AM &ndash; 9 PM</td></tr>
+              <tr data-day="6"><td>Saturday</td><td>8 AM &ndash; 9 PM</td></tr>
+              <tr data-day="0"><td>Sunday</td><td>8 AM &ndash; 9 PM</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-card reveal">
+      <h3>Free Estimate Request</h3>
+      <p class="sub">Fill this in and we&rsquo;ll prepare a message you can send in one tap.</p>
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="c-name">Your Name</label>
+          <input type="text" id="c-name" name="name" placeholder="Jane Smith" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="c-phone">Phone</label>
+          <input type="tel" id="c-phone" name="phone" placeholder="(863) 555-0123" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="c-address">Property Address</label>
+          <input type="text" id="c-address" name="address" placeholder="Street, city" autocomplete="street-address">
+        </div>
+        <div class="field">
+          <label for="c-service">Service Needed</label>
+          <select id="c-service" name="service">
+            <option>New asphalt driveway</option>
+            <option>Driveway seal coating</option>
+            <option>Parking lot paving / sealcoating</option>
+            <option>Crack filling &amp; asphalt repair</option>
+            <option>Excavation &amp; grading</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="c-notes">Details <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
+          <textarea id="c-notes" name="notes" placeholder="Approximate size, condition, timing&hellip;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-amber">Prepare My Request</button>
+        <p class="form-note">No data is stored or sent by this page. It builds a text message or call for you to send from your own phone.</p>
+        <div class="form-msg" id="contactMsg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="brand-mark">AS</span>
+          <b>Action Seal Coating LLC</b>
+        </div>
+        <p style="max-width:26rem;line-height:1.7">
+          Asphalt paving, seal coating and repair for homes and businesses in Sebring and
+          Highlands County, Florida. Family-owned, licensed and insured.
+        </p>
+        <p style="margin-top:1rem">
+          <span class="stars" style="color:var(--amber)">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span style="color:#c3c7ce"> 5.0 &middot; 10 Google reviews</span>
+        </p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Asphalt Paving</a></li>
+          <li><a href="#services">Seal Coating</a></li>
+          <li><a href="#services">Parking Lots</a></li>
+          <li><a href="#services">Crack Filling &amp; Repair</a></li>
+          <li><a href="#services">Excavation &amp; Grading</a></li>
+          <li><a href="#services">Resurfacing &amp; Overlay</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+18634516591">(863) 451-6591</a></li>
+          <li>301 Ruffians Way</li>
+          <li>Sebring, FL 33875</li>
+          <li>Open daily, 8 AM &ndash; 9 PM</li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&destination=301+Ruffians+Way,+Sebring,+FL+33875" target="_blank" rel="noopener">Get Directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Action Seal Coating LLC. All rights reserved.</span>
+      <span>Sebring, Florida &middot; Highlands County</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- mobile menu ---------- */
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  if (burger && navLinks) {
+    burger.addEventListener('click', function(){
+      var open = navLinks.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        navLinks.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  /* ---------- sticky nav shadow ---------- */
+  var nav = document.getElementById('siteNav');
+  function onScroll(){
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 12);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- scrollspy ---------- */
+  var sections = ['services','why','process','reviews','area','contact']
+    .map(function(id){ return document.getElementById(id); })
+    .filter(Boolean);
+  var linkFor = {};
+  navLinks && navLinks.querySelectorAll('a').forEach(function(a){
+    var id = (a.getAttribute('href') || '').replace('#','');
+    if (id) linkFor[id] = a;
+  });
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          Object.keys(linkFor).forEach(function(k){ linkFor[k].classList.remove('active'); });
+          var a = linkFor[e.target.id];
+          if (a) a.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    sections.forEach(function(s){ spy.observe(s); });
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ ro.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- today's hours highlight ---------- */
+  var today = new Date().getDay();
+  var row = document.querySelector('#hoursTable tr[data-day="' + today + '"]');
+  if (row) row.classList.add('today');
+
+  /* ---------- year ---------- */
+  var y = document.getElementById('year');
+  if (y) y.textContent = String(new Date().getFullYear());
+
+  /* ---------- estimate forms ---------- */
+  var PHONE = '+18634516591';
+  var PHONE_DISPLAY = '(863) 451-6591';
+
+  function digits(s){ return (s || '').replace(/\D/g, ''); }
+
+  function wireForm(formId, msgId){
+    var form = document.getElementById(formId);
+    var msg = document.getElementById(msgId);
+    if (!form || !msg) return;
+
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      msg.className = 'form-msg';
+      msg.innerHTML = '';
+
+      var name = (form.querySelector('[name="name"]').value || '').trim();
+      var phone = (form.querySelector('[name="phone"]').value || '').trim();
+      var service = form.querySelector('[name="service"]').value;
+      var notesEl = form.querySelector('[name="notes"]');
+      var notes = notesEl ? notesEl.value.trim() : '';
+      var addrEl = form.querySelector('[name="address"]');
+      var addr = addrEl ? addrEl.value.trim() : '';
+
+      if (name.length < 2) {
+        msg.className = 'form-msg show err';
+        msg.textContent = 'Please enter your name so we know who to ask for.';
+        form.querySelector('[name="name"]').focus();
+        return;
+      }
+      if (digits(phone).length < 10) {
+        msg.className = 'form-msg show err';
+        msg.textContent = 'Please enter a 10-digit phone number so we can reach you.';
+        form.querySelector('[name="phone"]').focus();
+        return;
+      }
+
+      var lines = [
+        'Hi Action Seal Coating, I would like a free estimate.',
+        'Name: ' + name,
+        'Phone: ' + phone
+      ];
+      if (addr) lines.push('Property: ' + addr);
+      lines.push('Service: ' + service);
+      if (notes) lines.push('Details: ' + notes);
+
+      var body = lines.join('\n');
+      var smsHref = 'sms:' + PHONE + '?&body=' + encodeURIComponent(body);
+
+      msg.className = 'form-msg show ok';
+      msg.innerHTML = 'Your request is ready. ' +
+        '<a href="' + smsHref + '">Send it as a text message</a> ' +
+        'or <a href="tel:' + PHONE + '">call ' + PHONE_DISPLAY + '</a>. ' +
+        'Nothing has been sent yet &mdash; you choose when to send it.';
+    });
+  }
+
+  wireForm('estimateForm', 'formMsg');
+  wireForm('contactForm', 'contactMsg');
+})();
+</script>
+</body>
+</html>
