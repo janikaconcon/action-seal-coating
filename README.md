@@ -38,8 +38,9 @@ Or simply open `index.html` in a browser.
 ## Structure
 
 ```
-index.html      Single page — all CSS and JS are inline
-images/         8 photographs of paving and seal coating work
+index.html      Main page — all CSS and JS are inline
+gallery.html    Project gallery — 5 job-site photos with a lightbox viewer
+images/         8 stock photos (main page) + 5 gallery photos
 ```
 
 ## Deploying
@@ -52,5 +53,9 @@ served directly by **GitHub Pages** (Settings → Pages → Deploy from branch �
 - The estimate forms have no backend. They validate the visitor's name and phone, then
   build a pre-filled text message and a tap-to-call link, so a request actually reaches
   the business instead of showing a fake "message sent" confirmation.
-- Photographs are professional stock imagery of paving and seal coating work, not the
-  company's own job photos. Replace them with real project shots when available.
+- The main page photographs are professional stock imagery of paving and seal coating
+  work, not the company's own job photos. Replace them with real project shots when
+  available.
+- The five photos on `gallery.html` (`images/gallery-0*.jpg`) **are** the company's own
+  job-site photos, supplied from their Google Business account. EXIF metadata (including
+  GPS location) was stripped before publishing.
